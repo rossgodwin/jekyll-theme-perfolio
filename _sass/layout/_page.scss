@@ -1,0 +1,212 @@
+.rg-page-wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: minmax(0, 1fr); // prevent grid blowout i.e. when embedding a gist in the grid
+	grid-template-areas:
+		// h = header
+		// c = content
+		// f = footer
+		"h"
+		"c"
+		"f";
+	height: 100vh;
+}
+
+// ------------- Header -----------------
+.rg-page-header {
+	grid-area: h;
+}
+
+.rg-page-header-wrapper {
+	display: flex;
+	flex-direction: column;
+	
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: $small-device-page-left-right-padding;
+	padding-right: $small-device-page-left-right-padding;
+	
+	background-color: $color-white;
+	border-bottom: 1px solid #ccc;
+}
+
+.rg-page-header-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.rg-page-header-menu-toggler {
+	@include opacity(0.8);
+	padding: 0rem .6rem;
+	background-color: transparent;
+	border: 0px;
+	color: $rg-theme-color-primary;
+	&:hover {
+		@include opacity(1);
+	}
+}
+.rg-page-header-menu-toggler:focus {
+    outline: 0 !important;
+}
+
+.rg-page-header-navigation {
+	display: none;
+	text-align: center;
+	
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			height: 2.35em;
+			
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
+	
+	&.active {
+		display: grid;
+		-webkit-transition: all 0.4s ease 0s;
+		transition: all 0.4s ease 0s;
+	}
+}
+
+.rg-page-header-navigation-item-separator {
+	display: none;
+	color: $rg-theme-color-primary;
+}
+
+// ------------- Content -----------------
+.rg-page-content {
+	grid-area: c;
+	display: grid;
+	grid-template-rows: auto 10px 1fr 10px;
+	grid-template-columns: minmax(0, 1fr); // prevent grid blowout i.e. when embedding a gist in the grid
+	grid-template-areas:
+		// ch = content header
+		// cm = content main
+		"ch"
+		"."
+		"cm";
+}
+
+.rg-page-content-header {
+	grid-area: ch;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	background: $rg-theme-background-color-secondary;
+	
+	.rg-quote {
+		background: $color-white;
+	}
+}
+
+.rg-page-content-header-inner {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $small-device-page-left-right-padding;
+	padding-right: $small-device-page-left-right-padding;
+	
+	.breadcrumbs {
+		margin-bottom: 1rem;
+	}
+}
+
+.rg-page-content-main {
+	grid-area: cm;
+	padding-left: $small-device-page-left-right-padding;
+	padding-right: $small-device-page-left-right-padding;
+}
+
+// ------------- Footer -----------------
+.rg-page-footer {
+	grid-area: f;
+	display: flex;
+	padding: .5em 0;
+	border-top: 5px solid $rg-theme-color-primary;
+}
+
+.rg-page-footer-wrapper {
+	@extend .rg-horizontal-align-center;
+}
+
+// ------------- Small devices (landscape phones, 576px and up) -----------------
+@media (min-width: $device-width-breakpoint-small) {
+}
+
+// ------------- Medium devices (tablets, 768px and up) -----------------
+@media (min-width: $device-width-breakpoint-medium) {
+	.rg-page-wrapper {
+		grid-template-rows: $medium-device-header-height 1fr auto;
+	}
+	
+	// ------------- Header -----------------
+	.rg-page-header {
+	}
+	
+	.rg-page-header-wrapper {
+		height: $medium-device-header-height;
+		
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		
+		text-align: left;
+	}
+	
+	.rg-page-header-navigation {
+		display: block;
+		text-align: left;
+		
+		ul {
+			li {
+				display: inline;
+				padding-right: 1.4em;
+			}
+			
+			li:last-child {
+				padding-right: 0em;
+			}
+		}
+	}
+
+	.rg-page-header-menu-toggler {
+		display: none;
+	}
+}
+
+// ------------- Large devices (desktops, 992px and up) -----------------
+@media (min-width: $device-width-breakpoint-large) {
+	.rg-page-wrapper {
+		grid-template-rows: $large-device-header-height 1fr auto;
+	}
+	
+	// ------------- Header -----------------
+	.rg-page-header-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: $large-device-header-height;
+	}
+}
+
+// ------------- Extra large devices (large desktops, 1200px and up) -----------------
+@media (min-width: $device-width-breakpoint-xlarge) {
+	// ------------- Content -----------------
+	.rg-page-content-header-inner {
+		max-width: 1140px;
+	}
+	
+	.rg-page-content-main {
+		min-width: 1140px;
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

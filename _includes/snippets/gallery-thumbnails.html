@@ -1,0 +1,7 @@
+<div id="lightgallery" class="custom-mfp-gallery">
+	{% for image in page.gallery %}
+		<a href="{{ image.url | relative_url }}"{% if image.title %} title="{{ image.title }}"{% endif %}>
+			<img src="{{ image.image_path | relative_url }}"{% if image.alt %} alt="{{ image.alt }}"{% endif %}>
+		</a>
+	{% endfor %}
+</div>

@@ -1,0 +1,190 @@
+
+.rg-horizontal-align-center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rg-heading {
+	letter-spacing: 0.15rem;
+	color: $rg-theme-color-primary;
+	text-transform: uppercase;
+}
+
+.rg-heading-leading-vertical-bar {
+	position: relative;
+	padding-left: 1rem;
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		width: 5px;
+		height: 100%;
+		background: $rg-theme-color-primary;
+		left: 0;
+		top: 0;
+   }
+}
+
+.rg-heading-line-separator {
+	display: grid;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+	grid-gap: 20px;
+	&:before,
+	&:after {
+		content: "";
+		border-top: 1px solid $rg-theme-color-primary;
+	}
+}
+
+.list-item-preview {
+	margin-bottom: 1rem;
+	
+	// This is needed because the excerpt_separator includes the paragraph tag
+	p {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.rg-link-arrow {
+		font-size: $font-size-secondary;
+	}
+}
+
+.list-item-preview-published {
+	margin-bottom: .5rem;
+	color: $rg-theme-text-color-light;
+	font-size: $font-size-secondary;
+}
+
+.rg-btn {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.375rem 1rem;
+	height: 2.75rem;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	text-decoration: none;
+	user-select: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.rg-btn-left-icon {
+	margin-right: 0.5rem;
+}
+
+.rg-btn-right-icon {
+	margin-left: 0.5rem;
+}
+
+.rg-btn-primary {
+	background: $rg-theme-color-primary;
+	color: $color-white;
+	border-color: transparent;
+	font-size: 1rem;
+	padding-top: 0.5rem;
+	&:hover {
+		background: $color-white;
+		border-color: $rg-theme-color-primary;
+		color: $rg-theme-color-primary;
+	}
+}
+
+.rg-paginator {
+	display: flex;
+	justify-content: center;
+}
+
+.rg-paginator-btn {
+	@extend .rg-btn;
+	@extend .rg-btn-primary;
+	margin-right: .5rem;
+	&:hover {
+		.fas {
+			color: $rg-theme-color-primary;
+		}
+	}
+}
+
+.rg-paginator-btn-selected {
+	text-decoration: underline !important;
+}
+
+.rg-paginator-btn-prev {
+	padding-right: 1rem;
+}
+
+.rg-paginator-btn-next {
+	padding-left: 1rem;
+}
+
+.rg-quote {
+	padding: 1.5rem;
+	padding-left: 3rem;
+	border: 1px solid rgba(0, 0, 0, 0.025);
+	background: $rg-theme-background-color-secondary;
+	height: 100%;
+	position: relative;
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 40px 40px 0 0;
+		border-color: $rg-theme-color-primary transparent transparent transparent;
+	}
+	
+	.fa-quote-left {
+		position: absolute;
+		left: 0.35rem;
+		top: 0.3rem;
+		color: $color-white;
+		font-size: 0.75rem;
+	}
+	
+	.svg-inline--fa {
+		display: inline-block;
+		height: 1em;
+		vertical-align: -0.125em;
+	}
+	
+	footer {
+		display: block;
+		margin-top: 0.5rem;
+		font-size: 80%;
+		color: #6c757d;
+		&:before {
+			content: "\2014\00A0";
+		}
+	}
+}
+
+.footnotes {
+	margin: 1em 0 0;
+	padding: 0 0 0.5em;
+	border-top: 1px dotted #bbb;
+}
+
+.rg-image-responsive {
+	width: 100%;
+	height: auto;
+}
+
+.rg-link-arrow {
+	&:after {
+		content: " \2192";
+	}
+}
