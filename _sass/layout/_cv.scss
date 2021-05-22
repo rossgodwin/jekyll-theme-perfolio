@@ -1,7 +1,7 @@
-$text-size: 0.875rem;
+$pf-cv-font-size: 0.875rem;
 
 .pf-cv-text {
-	font-size: $text-size;
+	font-size: $pf-cv-font-size;
 }
 
 .pf-cv-link {
@@ -20,7 +20,7 @@ $text-size: 0.875rem;
 }
 
 .pf-cv-wrapper .pf-quote {
-	font-size: $text-size;
+	font-size: $pf-cv-font-size;
 }
 
 .pf-cv-wrapper h1, h2, h3, h4, h5, h6 {
@@ -80,11 +80,18 @@ $text-size: 0.875rem;
 }
 
 .pf-cv-work-history-item-position {
-	font-size: $text-size;
+	font-size: $pf-cv-font-size;
 }
 
 .pf-cv-work-history-item-years-worked {
 	font-size: 0.75rem;
+}
+
+.pf-cv-list-items {
+	padding-left: inherit;
+	li {
+		font-size: $pf-cv-font-size;
+	}
 }
 
 .pf-cv-download-options {

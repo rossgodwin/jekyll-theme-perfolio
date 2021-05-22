@@ -1,4 +1,6 @@
 {% assign __return = site.description %}
-{% if page.excerpt %}
+{% if page.summary %}
+	{% assign __return = page.summary %}
+{% elsif page.excerpt %}
 	{% assign __return = page.excerpt | strip_html %}
 {% endif %}

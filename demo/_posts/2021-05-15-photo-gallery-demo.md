@@ -1,7 +1,6 @@
 ---
 layout: article
 title: &title "Photo Gallery Demo"
-summary: These are the steps I took to install and run the Jekyll static site generator on my Windows 10 operating system.
 tags: [jekyll, gallery, lightgallery, justifiedgallery]
 
 head-csss:
@@ -32,18 +31,19 @@ galleries:
         url: assets/images/posts/photo-gallery-demo/thumbnail-sample11.jpg
 ---
 
-This uses LightGallery for 
-and JustifiedGallery for rendering thumbnails.
-<br>
-<br>
-<br>
+Demonstration for how this theme can include pictures in to a blog post or page.
+<!--more-->
+This photo gallery utilizes [lightGallery](https://www.lightgalleryjs.com){:target="_blank"} for viewing photos and [Justified Gallery](http://miromannino.github.io/Justified-Gallery){:target="_blank"} for rendering thumbnails.
+
+#### lightGallery - Dynamic Mode
+
+[lightGallery dynamic mode demo](https://www.lightgalleryjs.com/demos/dynamic-mode){:target="_blank"}
 
 <a class="pf-button-primary" href="#" id="dynamic-demo">Launch Gallery</a>
 
-<br>
-<br>
-<br>
+#### lightGallery - Thumbnails
 
+[lightGallery thumbnails demo](https://www.lightgalleryjs.com/demos/thumbnails){:target="_blank"}
 
 {% assign _gallery = page.galleries[1] %}
 {% include snippets/components/gallery/thumbnails.html gallery=_gallery %}

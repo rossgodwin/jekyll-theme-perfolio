@@ -1,6 +1,6 @@
-$pf-device-small-padding-left-right: 1rem;
-$pf-device-medium-header-height: 7em;
-$pf-device-large-header-height: 5em;
+$pf-page-device-small-padding-left-right: 1rem;
+$pf-page-device-medium-header-height: 7em;
+$pf-page-device-large-header-height: 5em;
 
 .pf-page-wrapper {
 	display: grid;
@@ -27,8 +27,8 @@ $pf-device-large-header-height: 5em;
 	
 	padding-top: .5em;
 	padding-bottom: .5em;
-	padding-left: $pf-device-small-padding-left-right;
-	padding-right: $pf-device-small-padding-left-right;
+	padding-left: $pf-page-device-small-padding-left-right;
+	padding-right: $pf-page-device-small-padding-left-right;
 	
 	background-color: $color-white;
 	border-bottom: 1px solid #ccc;
@@ -112,8 +112,8 @@ $pf-device-large-header-height: 5em;
 .pf-page-content-header-inner {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $pf-device-small-padding-left-right;
-	padding-right: $pf-device-small-padding-left-right;
+	padding-left: $pf-page-device-small-padding-left-right;
+	padding-right: $pf-page-device-small-padding-left-right;
 	
 	.pf-breadcrumbs {
 		margin-bottom: 1rem;
@@ -122,8 +122,8 @@ $pf-device-large-header-height: 5em;
 
 .pf-page-content-main {
 	grid-area: cm;
-	padding-left: $pf-device-small-padding-left-right;
-	padding-right: $pf-device-small-padding-left-right;
+	padding-left: $pf-page-device-small-padding-left-right;
+	padding-right: $pf-page-device-small-padding-left-right;
 }
 
 // ------------- Footer -----------------
@@ -140,12 +140,12 @@ $pf-device-large-header-height: 5em;
 
 @media (min-width: $device-width-breakpoint-medium) {
 	.pf-page-wrapper {
-		grid-template-rows: $pf-device-medium-header-height 1fr auto;
+		grid-template-rows: $pf-page-device-medium-header-height 1fr auto;
 	}
 	
 	// ------------- Header -----------------
 	.pf-page-header-wrapper {
-		height: $pf-device-medium-header-height;
+		height: $pf-page-device-medium-header-height;
 		
 		position: fixed;
 		top: 0;
@@ -179,7 +179,7 @@ $pf-device-large-header-height: 5em;
 
 @media (min-width: $device-width-breakpoint-large) {
 	.pf-page-wrapper {
-		grid-template-rows: $pf-device-large-header-height 1fr auto;
+		grid-template-rows: $pf-page-device-large-header-height 1fr auto;
 	}
 	
 	// ------------- Header -----------------
@@ -187,7 +187,7 @@ $pf-device-large-header-height: 5em;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		height: $pf-device-large-header-height;
+		height: $pf-page-device-large-header-height;
 	}
 }
 

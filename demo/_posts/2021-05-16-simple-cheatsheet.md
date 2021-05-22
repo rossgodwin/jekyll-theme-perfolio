@@ -1,8 +1,7 @@
 ---
 layout: article
 title: &title "Simple Jekyll Cheatsheet"
-summary: These are the steps I took to install and run the Jekyll static site generator on my Windows 10 operating system.
-categories: demo
+summary: The following post demonstrates syntax for incorporating static assets and jekyll plugins in to a blog post or page.
 tags: [jekyll, markdown, cheatsheet]
 include-highlightjs: yes
 ---

@@ -5,7 +5,7 @@ url: 'https://rossgodwin.github.io'
 baseurl: '/jekyll-theme-perfolio'
 lang: en
 title: John Doe
-description: Top performing project manager located in the Raleigh Durham (RTP) area.
+description: A simple Jekyll theme for a personal portfolio.
 
 # Analytics
 google_analytics_measurement_id: ''

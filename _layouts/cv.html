@@ -92,26 +92,14 @@ head-print-csss:
 		
 		<section>
 			<div class="pf-cv-section-heading">
-				<h4>{{ site.data.cv.projects-heading-text }}</h4>
+				<h4>{{ site.data.cv.accomplishments-heading-text }}</h4>
 			</div>
 			<div class="pf-cv-section-content">
-				{% for project in site.data.cv.projects %}
-					<div class="pf-cv-work-history-item">
-						<div>
-							<div class="pf-cv-work-history-item-employer">
-								{% if project.internal-url %}
-									<a class="pf-link-arrow" href="{{ project.internal-url | relative_url }}">{{ project.name }}</a>
-								{% else %}
-									{{ project.name }}
-								{% endif %}
-							</div>
-							<div class="pf-cv-work-history-item-years-worked">{{ project.duration }}</div>
-						</div>
-						<div class="pf-cv-text">
-							{{ project.description }}
-						</div>
-					</div>
-				{% endfor %}
+				<ul class="pf-cv-list-items">
+					{% for accomplishment in site.data.cv.accomplishments %}
+						<li>{{ accomplishment }}</li>
+					{% endfor %}
+				</ul>
 			</div>
 		</section>
 		
