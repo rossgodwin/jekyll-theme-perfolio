@@ -1,11 +1,13 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
 {% if page.include-highlightjs %}
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/monokai-sublime.min.css" >
+	<link rel="stylesheet" href="{{ 'assets/lib/highlightjs/css/monokai-sublime.min.css' | relative_url }}" >
 {% endif %}
 {% for css in layout.head-csss %}
     <link rel="stylesheet" type="text/css" href="{{ css | relative_url }}">
 {% endfor %}
 {% for css in layout.head-print-csss %}
 	<link rel="stylesheet" type="text/css" href="{{ css | relative_url }}" media="print">
+{% endfor %}
+{% for css in page.head-csss %}
+    <link rel="stylesheet" type="text/css" href="{{ css | relative_url }}">
 {% endfor %}

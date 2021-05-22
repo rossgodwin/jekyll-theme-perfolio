@@ -1,12 +1,12 @@
-<script src="{{ '/assets/js/lib/jquery-3.1.1.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/lib/jquery-3.1.1/js/jquery.min.js' | relative_url }}"></script>
 {% if page.include-highlightjs %}
-	<script src="{{ '/assets/js/lib/highlight-10.0.3.min.js' | relative_url }}"></script>
+	<script src="{{ 'assets/lib/highlightjs/js/highlight-10.0.3.min.js' | relative_url }}"></script>
 {% endif %}
 
 <script>
 	$(document).ready(function() {
-		$(".rg-page-header-menu-toggler").click(function(e) {
-			$(".rg-page-header-navigation").toggleClass("active");
+		$(".pf-page-header-menu-toggler").click(function(e) {
+			$(".pf-page-header-navigation").toggleClass("active");
 		});
 
 		$("#year").html(new Date().getFullYear());
@@ -20,5 +20,11 @@
 </script>
 
 {% for script in layout.body-footer-scripts %}
-    <script src="{{ script | relative_url }}"></script>
+	<script src="{{ script | relative_url }}"></script>
 {% endfor %}
+
+{% for script in page.body-footer-scripts %}
+	<script src="{{ script | relative_url }}"></script>
+{% endfor %}
+
+{% include snippets/components/gallery/init.html %}

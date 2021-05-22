@@ -1,23 +1,17 @@
+$device-width-breakpoint-small: 576px;		// Small devices (landscape phones, 576px and up)
+$device-width-breakpoint-medium: 768px;		// Medium devices (tablets, 768px and up)
+$device-width-breakpoint-large: 992px;		// Large devices (desktops, 992px and up)
+$device-width-breakpoint-xlarge: 1200px;	// Extra large devices (large desktops, 1200px and up)
+$device-width-breakpoint-xxlarge: 1400px;	// Extra extra large devices (large desktops, 1400px and up)
+
 $color-white: #fff;
 
-$font-size-secondary: 0.8125rem;
+$pf-font-Segeo: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$pf-font-TimesNewRomand: Georgia, "Times New Roman", Times, serif;
 
-$small-device-page-left-right-padding: 1rem;
-
-$medium-device-header-height: 7em;
-
-$large-device-header-height: 5em;
-
-$rg-theme-color-primary: #205ec9;
-$rg-theme-background-color-secondary: #fafafa;
-$rg-theme-text-color-primary: #292929;
-$rg-theme-text-color-secondary: lighten($rg-theme-text-color-primary, 15%);
-$rg-theme-text-color-light: lighten($rg-theme-text-color-primary, 40%);
-
-$rg-font-Segeo: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$rg-font-TimesNewRomand : Georgia, "Times New Roman", Times, serif;
-
-$device-width-breakpoint-small: 576px;
-$device-width-breakpoint-medium: 768px;
-$device-width-breakpoint-large: 992px;
-$device-width-breakpoint-xlarge: 1200px;
+$pf-theme-color-primary: #205ec9;
+$pf-theme-background-color-secondary: #fafafa;
+$pf-theme-font-size-secondary: 0.8125rem;
+$pf-theme-text-color-primary: #292929;
+$pf-theme-text-color-secondary: lighten($pf-theme-text-color-primary, 15%);
+$pf-theme-text-color-light: lighten($pf-theme-text-color-primary, 40%);

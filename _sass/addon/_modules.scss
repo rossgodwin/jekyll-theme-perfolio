@@ -1,17 +1,17 @@
-
-.rg-horizontal-align-center {
+.pf-horizontal-align-center {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.rg-heading {
+.pf-heading {
 	letter-spacing: 0.15rem;
-	color: $rg-theme-color-primary;
+	color: $pf-theme-color-primary;
 	text-transform: uppercase;
 }
 
-.rg-heading-leading-vertical-bar {
+.pf-heading-leading-vertical-bar {
+	@extend .pf-heading;
 	position: relative;
 	padding-left: 1rem;
 	&:before {
@@ -20,27 +20,13 @@
 		position: absolute;
 		width: 5px;
 		height: 100%;
-		background: $rg-theme-color-primary;
+		background: $pf-theme-color-primary;
 		left: 0;
 		top: 0;
    }
 }
 
-.rg-heading-line-separator {
-	display: grid;
-	width: 100%;
-	align-items: center;
-	text-align: center;
-	grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
-	grid-gap: 20px;
-	&:before,
-	&:after {
-		content: "";
-		border-top: 1px solid $rg-theme-color-primary;
-	}
-}
-
-.list-item-preview {
+.pf-list-item-preview {
 	margin-bottom: 1rem;
 	
 	// This is needed because the excerpt_separator includes the paragraph tag
@@ -49,18 +35,18 @@
 		margin-bottom: 0;
 	}
 	
-	.rg-link-arrow {
-		font-size: $font-size-secondary;
+	.pf-link-arrow {
+		font-size: $pf-theme-font-size-secondary;
 	}
 }
 
-.list-item-preview-published {
+.pf-list-item-preview-published {
 	margin-bottom: .5rem;
-	color: $rg-theme-text-color-light;
-	font-size: $font-size-secondary;
+	color: $pf-theme-text-color-light;
+	font-size: $pf-theme-font-size-secondary;
 }
 
-.rg-btn {
+.pf-button {
 	display: inline-block;
 	font-weight: bold;
 	padding: 0.375rem 1rem;
@@ -78,60 +64,62 @@
 	}
 }
 
-.rg-btn-left-icon {
+.pf-button-left-icon {
 	margin-right: 0.5rem;
 }
 
-.rg-btn-right-icon {
+.pf-button-right-icon {
 	margin-left: 0.5rem;
 }
 
-.rg-btn-primary {
-	background: $rg-theme-color-primary;
+.pf-button-primary {
+	@extend .pf-button;
+	background: $pf-theme-color-primary;
 	color: $color-white;
 	border-color: transparent;
 	font-size: 1rem;
 	padding-top: 0.5rem;
 	&:hover {
 		background: $color-white;
-		border-color: $rg-theme-color-primary;
-		color: $rg-theme-color-primary;
+		border-color: $pf-theme-color-primary;
+		color: $pf-theme-color-primary;
 	}
 }
 
-.rg-paginator {
+.pf-paginator {
 	display: flex;
 	justify-content: center;
 }
 
-.rg-paginator-btn {
-	@extend .rg-btn;
-	@extend .rg-btn-primary;
+.pf-paginator-button {
+	@extend .pf-button-primary;
 	margin-right: .5rem;
 	&:hover {
 		.fas {
-			color: $rg-theme-color-primary;
+			color: $pf-theme-color-primary;
 		}
 	}
 }
 
-.rg-paginator-btn-selected {
+.pf-paginator-button-selected {
 	text-decoration: underline !important;
 }
 
-.rg-paginator-btn-prev {
+.pf-paginator-button-prev {
+	@extend .pf-paginator-button;
 	padding-right: 1rem;
 }
 
-.rg-paginator-btn-next {
+.pf-paginator-button-next {
+	@extend .pf-paginator-button;
 	padding-left: 1rem;
 }
 
-.rg-quote {
+.pf-quote {
 	padding: 1.5rem;
 	padding-left: 3rem;
 	border: 1px solid rgba(0, 0, 0, 0.025);
-	background: $rg-theme-background-color-secondary;
+	background: $pf-theme-background-color-secondary;
 	height: 100%;
 	position: relative;
 	&:before {
@@ -144,7 +132,7 @@
 		height: 0;
 		border-style: solid;
 		border-width: 40px 40px 0 0;
-		border-color: $rg-theme-color-primary transparent transparent transparent;
+		border-color: $pf-theme-color-primary transparent transparent transparent;
 	}
 	
 	.fa-quote-left {
@@ -172,19 +160,19 @@
 	}
 }
 
-.footnotes {
+.pf-footnotes {
 	margin: 1em 0 0;
 	padding: 0 0 0.5em;
 	border-top: 1px dotted #bbb;
 }
 
-.rg-image-responsive {
+.pf-image-responsive {
 	width: 100%;
 	height: auto;
 }
 
-.rg-link-arrow {
+.pf-link-arrow {
 	&:after {
-		content: " \2192";
+		content: "\2192";
 	}
 }

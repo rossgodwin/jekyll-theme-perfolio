@@ -1,0 +1,81 @@
+# Site wide configuration
+theme: jekyll-theme-perfolio
+destination: ../docs
+url: 'https://rossgodwin.github.io'
+baseurl: '/jekyll-theme-perfolio'
+lang: en
+title: John Doe
+description: Top performing project manager located in the Raleigh Durham (RTP) area.
+
+# Analytics
+google_analytics_measurement_id: ''
+
+exclude:
+  - .bundle
+  - .jekyll-cache
+  - .gitignore
+  - .project
+  - _drafts
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/bundle/
+
+excerpt_separator: <!--more-->
+
+sass:
+  style: :compressed
+
+# Plugins
+gems:
+  - jekyll-feed
+  - jekyll-liquify
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-gist
+
+defaults:
+  - scope:
+      path: docs/*
+    values:
+      sitemap: false
+  - scope:
+      path: assets/*
+    values:
+      sitemap: false
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      permalink: /blog/:year/:month/:day/:title:output_ext
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/:num/'
+  title: ':title | :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+# Plugin: Auto Pages (jekyll-paginate-v2)
+autopages:
+  enabled: false
+  tags:
+    enabled: false
+    layouts:
+      - autopage_tags.html
+    permalink: /tag/:tag
+  categories:
+    enabled: false
+    layouts:
+      - autopage_category.html
+  collections:
+    enabled: false
+    slugify:
+      mode: 'ascii'
+      cased: true

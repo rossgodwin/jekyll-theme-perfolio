@@ -1,14 +1,15 @@
 @import
 	"reset",
 	
+	"lib/fontawesome-free-5.15.3-web/fontawesome.scss",
+	"lib/fontawesome-free-5.15.3-web/solid.scss",
+	"lib/fontawesome-free-5.15.3-web/brands.scss",
+	
 	"addon/variables",
 	"addon/mixins",
 	"addon/commons",
 	"addon/modules",
 	
 	"layout/page",
-	"layout/about",
 	"layout/article",
-	"layout/cv",
-	"layout/gallery",
-	"layout/project"
+	"layout/cv"

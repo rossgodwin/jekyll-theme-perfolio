@@ -1,36 +1,36 @@
-.rg-article {
+.pf-article {
 	margin-top: 1rem;
 }
 
-.rg-article-header {
+.pf-article-header {
 }
 
-.rg-article-header-meta {
+.pf-article-header-meta {
 	margin-bottom: 1rem;
-	color: $rg-theme-text-color-light;
+	color: $pf-theme-text-color-light;
 	font-size: 0.8125rem;
 }
 
-.rg-article-body {
+.pf-article-body {
 	.image-caption {
-		color: $rg-theme-text-color-light;
+		color: $pf-theme-text-color-light;
 		font-size: 0.875rem;
 		a {
-			color: $rg-theme-text-color-light;
+			color: $pf-theme-text-color-light;
 			text-decoration: underline;
 			&:hover {
-				color: $rg-theme-text-color-secondary;
+				color: $pf-theme-text-color-secondary;
 			}
 		}
 	}
 	
-	.quote {
+	.pf-quote {
 		margin-bottom: .5rem;
 	}
 	
 	.blockquote {
-		font-family: $rg-font-TimesNewRomand;
-		border-left: 2px solid $rg-theme-text-color-primary;
+		font-family: $pf-font-TimesNewRomand;
+		border-left: 2px solid $pf-theme-text-color-primary;
 		font-size: 1.5rem;
 		p {
 			font-size: 1.5rem;
@@ -38,6 +38,6 @@
 	}
 	
 	h1, h2, h3, h4, h5, h6 {
-		@extend .rg-heading;
+		@extend .pf-heading;
 	}
 }

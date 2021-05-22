@@ -1,0 +1,28 @@
+I"±<p>This uses LightGallery for 
+and JustifiedGallery for rendering thumbnails.
+<br />
+<br />
+<br /></p>
+
+<p><a class="pf-button-primary" href="#" id="dynamic-demo">Launch Gallery</a></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<div id="thumbnail-demo">
+	
+		<a href="/jekyll-theme-perfolio/assets/images/posts/photo-gallery-demo/thumbnail-sample1.jpg" data-sub-html="Description 1">
+			<img src="/jekyll-theme-perfolio/assets/images/posts/photo-gallery-demo/thumbnail-sample1-th.jpg" />
+		</a>
+	
+		<a href="/jekyll-theme-perfolio/assets/images/posts/photo-gallery-demo/thumbnail-sample10.jpg" data-sub-html="Description 2">
+			<img src="/jekyll-theme-perfolio/assets/images/posts/photo-gallery-demo/thumbnail-sample10-th.jpg" />
+		</a>
+	
+		<a href="/jekyll-theme-perfolio/assets/images/posts/photo-gallery-demo/thumbnail-sample11.jpg">
+			<img src="/jekyll-theme-perfolio/assets/images/posts/photo-gallery-demo/thumbnail-sample11-th.jpg" />
+		</a>
+	
+</div>
+:ET

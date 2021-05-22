@@ -14,44 +14,44 @@ a {
 	text-decoration: none;
 }
 
-.rg-page-wrapper {
+.pf-page-wrapper {
 	grid-template-rows: auto;
 }
 
-.rg-page-header {
+.pf-page-header {
 	display: none;
 }
 
-.rg-page-content {
+.pf-page-content {
 	grid-template-areas:
 		"cm";
 }
 
-.rg-page-content-header {
+.pf-page-content-header {
 	display: none;
 }
 
-.rg-page-content-main {
+.pf-page-content-main {
 	padding: 0;
 }
 
-.rg-cv-wrapper {
+.pf-cv-wrapper {
 	padding-top: 0;
 	padding-bottom: 0;
 	border: 0;
 	box-shadow: none;
 }
 
-.rg-link-arrow {
+.pf-link-arrow {
 	&:after {
 		content: "";
 	}
 }
 
-.rg-cv-download-options {
+.pf-cv-download-options {
 	display: none;
 }
 
-.rg-page-footer {
+.pf-page-footer {
 	display: none;
 }
