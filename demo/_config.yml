@@ -4,8 +4,6 @@ destination: ../docs
 url: 'https://rossgodwin.github.io'
 baseurl: '/jekyll-theme-perfolio'
 lang: en
-title: John Doe
-description: A simple Jekyll theme for a personal portfolio.
 
 # Analytics
 google_analytics_measurement_id: ''

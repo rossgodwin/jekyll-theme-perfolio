@@ -1,0 +1,34 @@
+{% assign _locale = page.og-locale | default: site.data.seo.og-locale %}
+{% if _locale %}
+	<meta property="og:locale" content="{{ _locale }}" />
+{% endif %}
+
+{% assign _title = page.og-title | default: site.data.seo.og-title %}
+{% if _title %}
+	<meta name="og:title" content="{{ _title }}" />
+{% endif %}
+
+{% assign _description = site.data.seo.og-description %}
+{% if page.og-description %}
+	{% assign _description = page.og-description %}
+{% elsif page.summary %}
+	{% assign _description = page.summary %}
+{% elsif page.excerpt %}
+	{% assign _description = page.excerpt | strip_html %}
+{% endif %}
+{% if _description %}
+	<meta name="og:description" content="{{ _description }}" />
+{% endif %}
+
+{% assign _type = page.og-type | default: site.data.seo.og-type %}
+{% if _type %}
+	<meta property="og:type" content="{{ _type }}" />
+{% endif %}
+
+{% include helpers/get-page-url.html %}
+<meta property="og:url" content="{{ __return }}" />
+
+{% assign _image = page.og-image | default: site.data.seo.og-image %}
+{% if _image %}
+	<meta property="og:image" content="{{ _image }}" />
+{% endif %}

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: &title "Photo Gallery Demo"
+title: Photo Gallery Demo
 tags: [jekyll, gallery, lightgallery, justifiedgallery]
 
 head-csss:
@@ -31,8 +31,7 @@ galleries:
         url: assets/images/posts/photo-gallery-demo/thumbnail-sample11.jpg
 ---
 
-Demonstration for how this theme can include pictures in to a blog post or page.
-<!--more-->
+Demonstration for how this theme can include pictures in to a blog post or page.<!--more-->
 This photo gallery utilizes [lightGallery](https://www.lightgalleryjs.com){:target="_blank"} for viewing photos and [Justified Gallery](http://miromannino.github.io/Justified-Gallery){:target="_blank"} for rendering thumbnails.
 
 #### lightGallery - Dynamic Mode

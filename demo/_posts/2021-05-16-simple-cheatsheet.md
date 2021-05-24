@@ -1,6 +1,6 @@
 ---
 layout: article
-title: &title "Simple Jekyll Cheatsheet"
+title: Simple Jekyll Cheatsheet
 summary: The following post demonstrates syntax for incorporating static assets and jekyll plugins in to a blog post or page.
 tags: [jekyll, markdown, cheatsheet]
 include-highlightjs: yes
