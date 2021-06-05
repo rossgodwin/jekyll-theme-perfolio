@@ -24,13 +24,24 @@ excerpt_separator: <!--more-->
 sass:
   style: :compressed
 
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
 # Plugins
 gems:
   - jekyll-feed
   - jekyll-liquify
-  - jekyll-sitemap
-  - jekyll-paginate-v2
+
+plugins:
   - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-sitemap
 
 defaults:
   - scope:
