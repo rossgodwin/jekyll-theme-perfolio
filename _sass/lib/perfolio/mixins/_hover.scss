@@ -1,9 +1,3 @@
-@mixin opacity ($opacity: 0.5) {
-	-webkit-opacity: 	$opacity;
-	-moz-opacity: 		$opacity;
-	opacity: 		$opacity;
-}
-
 @mixin hover {
 	&:hover { @content; }
 }
